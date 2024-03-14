@@ -194,9 +194,11 @@ def actualizar(evento):
 
 root = Tk()
 root.title("SPOTMUSIC")
+
         
 titulo = Label(root, text="Almacená tus canciones favoritas",anchor=CENTER, background="chocolate1", foreground="black", font=("Almacena tus canciones favoritas",10,'roman'))
 titulo.grid(row=0, column=0, columnspan=4, padx=1, pady=1, sticky=W+E)
+
 
 playlist = Label(root, text="Playlist")
 playlist.grid(row=1, column=0, sticky=W)
@@ -207,7 +209,7 @@ cancion.grid(row=3, column=0, sticky=W)
 
 # Defino variables para tomar valores de campos de entrada
 a_val, b_val, c_val = StringVar(), StringVar(), StringVar()
-w_ancho = 20
+w_ancho = 30
 
 entrada1 = Entry(root, textvariable = a_val, width = w_ancho) 
 entrada1.grid(row = 1, column =1 )
@@ -221,6 +223,7 @@ entrada3.grid(row = 3, column = 1)
 # --------------------------------------------------
 
 tree = ttk.Treeview(root)
+
 tree["columns"]=("col1", "col2", "col3")
 tree.column("#0", width=90, minwidth=50, anchor=W)
 tree.column("col1", width=200, minwidth=80)
@@ -232,7 +235,7 @@ tree.heading("#0", text="ID")
 tree.heading("col1", text="Playlist")
 tree.heading("col2", text="Artista")
 tree.heading("col3", text="Canción")
-tree.grid(row=100, column=0, columnspan=4)
+tree.grid(row=200, column=0, columnspan=4)
 
 style = Style()
 style.configure('TButton', font =
